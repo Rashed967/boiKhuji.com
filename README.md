@@ -1,38 +1,42 @@
 Functionalities:
-Admin and editor can add books
-Publisher can add post book (pending)
-Admin or editor can accept/reject book add request
-Normal user can see book and can search different way
-Normal user can give review/rating
-Every publisher/writer/translator/cover designer has a profile
-Normal user can buy book
-Easy filtering options everywhere
-Easy book add system
-Admin or editor update any book information
-Add categories/tags
+
+-   Admin and editor can add books
+-   Publisher can add post book (pending)
+-   Admin or editor can accept/reject book add request
+-   Normal user can see book and can search different way
+-   Normal user can give review/rating
+-   Every publisher/writer/translator/cover designer has a profile
+-   Normal user can buy book
+-   Easy filtering options everywhere
+-   Easy book add system
+-   Admin or editor update any book information
+-   Add categories/tags
 
 **Account information**
 
 **Admin**:
-Name
-userName
-Password
-Email
-Role
+
+-   Name
+-   userName
+-   Password
+-   Email
+-   Role
 
 **Editor**:
-name
-userName
-Password
-Email
-Role
+
+-   name
+-   userName
+-   Password
+-   Email
+-   Role
 
 **User:**
-name
-userName
-Password
-Email
-Role
+
+-   name
+-   userName
+-   Password
+-   Email
+-   Role
 
 **Data model **
 
