@@ -1,9 +1,9 @@
-import { Request, Response } from "express"
+import { Request, RequestHandler, Response } from "express"
 import { NextFunction } from "express-serve-static-core"
 
 
 // catchAsync function
-const catchAsync = (fn) => {
+const catchAsync = (fn:RequestHandler) => {
     return (req:Request, res:Response, next:NextFunction) => {
         Promise.resolve(fn(req, res, next)).catch(error => next(error))
     }
