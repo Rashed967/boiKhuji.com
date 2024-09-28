@@ -3,6 +3,7 @@ import { Types } from 'mongoose'
 // book interface
 export interface IBook {
     title: string
+    imageUrl: string;
     author: Array<Types.ObjectId>
     translator?: Array<Types.ObjectId>
     coverDesigner?: Types.ObjectId
@@ -22,5 +23,6 @@ export interface IBook {
     summary: {
         shortSummary: string
         longSummary: string
-    }
+    },
+    isDeleted?: boolean
 }

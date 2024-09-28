@@ -1,5 +1,7 @@
 import express from 'express'
 import { bookController } from './book.controller'
+import validateRequest from '../../middleware/validateRequest'
+import { bookValidationSchema } from './book.validation'
 
 const routes = express.Router()
 
@@ -9,12 +11,22 @@ routes.get('/', bookController.getAllbook)
 // get book by _id
 routes.get('/:bookId', bookController.getBookById)
 
-// crete book
-routes.post('/', bookController.createBook)
+// create book
+routes.post(
+    '/',
+    validateRequest(bookValidationSchema.createBookValidationSchema),
+    bookController.createBook
+)
 
 // update book by _id
-routes.patch('/:bookId', bookController.updateBookById)
+routes.patch(
+    '/:bookId',
+    validateRequest(bookValidationSchema.updateBookValidationSchema),
+    bookController.updateBookById
+)
 
-// export routes 
+// delete book by id
+routes.delete('/:bookId', bookController.deleteBookById)
+
+// export routes
 export const bookRoutes = routes
-
