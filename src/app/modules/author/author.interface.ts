@@ -7,5 +7,6 @@ export interface IAuthor {
         shortBio: string;
         longBio: string;
     },
-    books?: Array<Types.ObjectId>
+    books?: Array<Types.ObjectId>,
+    isDeleted?: boolean,
 }

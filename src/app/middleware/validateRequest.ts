@@ -5,12 +5,9 @@ import { AnyZodObject } from "zod"
  const validateRequest = (schema: AnyZodObject) => {
     return async(req:Request, res:Response, next:NextFunction) => {
         try{
-            const {success, error} = await schema.safeParseAsync({
+            await schema.safeParseAsync({
                 body: req.body
             })
-            if(!success){
-                throw new Error("author validation faild")
-            }
             next()
 
         }catch(error){

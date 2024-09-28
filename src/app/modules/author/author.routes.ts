@@ -12,10 +12,13 @@ routes.get("/", authorControllres.getAllAuthor)
 routes.get("/:authorId", authorControllres.getAuthorById)
 
 // create author 
-routes.post("/", validateRequest(authorValidationSchema.createAuthorValidationSchema), authorControllres.createAuthor)
+routes.post("/" , validateRequest(authorValidationSchema.createAuthorValidationSchema), authorControllres.createAuthor)
 
 // update author by id
-routes.patch("/", validateRequest(authorValidationSchema.updateAuthorValidationSchema), authorControllres.updateAuthorById)
+routes.patch("/:authorId", validateRequest(authorValidationSchema.updateAuthorValidationSchema), authorControllres.updateAuthorById)
+
+// delete author by id
+routes.delete("/:authorId", authorControllres.deleteAuthorById)
 
 // export author routes
 export const authorRoutes = routes
